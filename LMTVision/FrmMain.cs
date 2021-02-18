@@ -274,6 +274,7 @@ namespace LMTVision
             try
             {
                 int a = 0;
+                int b = 0;
                 gBWarm.SendToBack();
                 this.SetVisibleCore(false);
                 this.FormBorderStyle = FormBorderStyle.None;
