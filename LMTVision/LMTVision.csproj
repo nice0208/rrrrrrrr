@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{55A5C115-0D3D-4B9E-AA0C-48E91D9A6381}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LMTVision</RootNamespace>
+    <AssemblyName>LMTVision</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>lens_72px_1180548_easyicon.net.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Advantech.Motion">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Advantech\Common Motion\Utility\Advantech.Motion.dll</HintPath>
+    </Reference>
+    <Reference Include="halcondotnet, Version=17.12.0.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MvCameraControl.Net, Version=3.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MvCameraControl.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="PylonC.NET, Version=4.2.0.0, Culture=neutral, PublicKeyToken=a77e8471c5919d5a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\PylonC.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="ReadBarcode, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ReadBarcode.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EnableClass.cs" />
+    <Compile Include="FrmChoseTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChoseTable.Designer.cs">
+      <DependentUpon>FrmChoseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGlueUserIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGlueUserIn.Designer.cs">
+      <DependentUpon>FrmGlueUserIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmShowAVI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShowAVI.Designer.cs">
+      <DependentUpon>FrmShowAVI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBarcode.Designer.cs">
+      <DependentUpon>FrmBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDisplay1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDisplay1.Designer.cs">
+      <DependentUpon>FrmDisplay1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDisplay2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDisplay2.Designer.cs">
+      <DependentUpon>FrmDisplay2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUntie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUntie.Designer.cs">
+      <DependentUpon>FrmUntie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVar.Designer.cs">
+      <DependentUpon>FrmVar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVisionSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVisionSet.Designer.cs">
+      <DependentUpon>FrmVisionSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSetUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSetUp.Designer.cs">
+      <DependentUpon>FrmSetUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IniFile_2.cs" />
+    <Compile Include="MethodGlueCU.cs" />
+    <Compile Include="ImageProcess.cs" />
+    <Compile Include="iniFile.cs" />
+    <Compile Include="MyHikvision.cs" />
+    <Compile Include="MySliderUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MySliderUC.designer.cs">
+      <DependentUpon>MySliderUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\UC_FitCircleTool.cs" />
+    <Compile Include="Tool_UI\UC_FitCircle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tool_UI\UC_FitCircle.designer.cs">
+      <DependentUpon>UC_FitCircle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool_UI\UC_Slider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tool_UI\UC_Slider.designer.cs">
+      <DependentUpon>UC_Slider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VarLighter.cs" />
+    <Compile Include="MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PswChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PswChange.Designer.cs">
+      <DependentUpon>PswChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pylon\BitmapFactory.cs" />
+    <Compile Include="Pylon\DeviceEnumerator.cs" />
+    <Compile Include="Pylon\EnumerationComboBoxUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pylon\EnumerationComboBoxUserControl.designer.cs">
+      <DependentUpon>EnumerationComboBoxUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pylon\ImageProvider.cs" />
+    <Compile Include="Pylon\SliderUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pylon\SliderUserControl.designer.cs">
+      <DependentUpon>SliderUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Var.cs" />
+    <Compile Include="Web References\BPFWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GlueMatchLabel\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\glueWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\JBPFWebIn\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\JBPFWebOut\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\JMBMatchLabel\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MBMatchLabel\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSetLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSetLogin.Designer.cs">
+      <DependentUpon>FrmSetLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Web_Tray_InOut\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="膠前膠後.cs" />
+    <EmbeddedResource Include="FrmChoseTable.resx">
+      <DependentUpon>FrmChoseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGlueUserIn.resx">
+      <DependentUpon>FrmGlueUserIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmShowAVI.resx">
+      <DependentUpon>FrmShowAVI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBarcode.resx">
+      <DependentUpon>FrmBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDisplay1.resx">
+      <DependentUpon>FrmDisplay1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDisplay2.resx">
+      <DependentUpon>FrmDisplay2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUntie.resx">
+      <DependentUpon>FrmUntie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVar.resx">
+      <DependentUpon>FrmVar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVisionSet.resx">
+      <DependentUpon>FrmVisionSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSetUp.resx">
+      <DependentUpon>FrmSetUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySliderUC.resx">
+      <DependentUpon>MySliderUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PswChange.resx">
+      <DependentUpon>PswChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pylon\EnumerationComboBoxUserControl.resx">
+      <DependentUpon>EnumerationComboBoxUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pylon\SliderUserControl.resx">
+      <DependentUpon>SliderUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSetLogin.resx">
+      <DependentUpon>FrmSetLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool_UI\UC_FitCircle.resx">
+      <DependentUpon>UC_FitCircle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool_UI\UC_Slider.resx">
+      <DependentUpon>UC_Slider.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\BPFWeb\Eqp_BPF.wsdl" />
+    <None Include="Web References\BPFWeb\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GlueMatchLabel\MatchLabel.wsdl" />
+    <None Include="Web References\GlueMatchLabel\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\glueWebReference\MatchLabel.wsdl" />
+    <None Include="Web References\glueWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\JBPFWebIn\Eqp_BPF.wsdl" />
+    <None Include="Web References\JBPFWebIn\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\JBPFWebOut\MatchLabel.wsdl" />
+    <None Include="Web References\JBPFWebOut\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\JMBMatchLabel\MatchLabel.wsdl" />
+    <None Include="Web References\JMBMatchLabel\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MBMatchLabel\MatchLabel.wsdl" />
+    <None Include="Web References\MBMatchLabel\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Web_Tray_InOut\Eqp_LMT.wsdl" />
+    <None Include="Web References\Web_Tray_InOut\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Web_Tray_InOut\Eqp_LMT.disco" />
+    <None Include="ECC200_0.PNG" />
+    <None Include="ECC200_90.PNG" />
+    <None Include="ECC200_-90.PNG" />
+    <None Include="ECC200_180.PNG" />
+    <Content Include="lens_72px_1180548_easyicon.net.ico" />
+    <None Include="Web References\glueWebReference\MatchLabel.disco" />
+    <None Include="Web References\JBPFWebOut\MatchLabel.disco" />
+    <None Include="Web References\JBPFWebIn\Eqp_BPF.disco" />
+    <None Include="Web References\BPFWeb\Eqp_BPF.disco" />
+    <None Include="Web References\GlueMatchLabel\MatchLabel.disco" />
+    <None Include="Web References\JMBMatchLabel\MatchLabel.disco" />
+    <None Include="Web References\MBMatchLabel\MatchLabel.disco" />
+    <None Include="Resources\circle_slelected_128px_1143358_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://192.168.0.26/MESWS//Assembly/MatchLabel.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GlueMatchLabel\</RelPath>
+      <UpdateFromURL>http://192.168.0.26/MESWS//Assembly/MatchLabel.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LMTVision_GlueMatchLabel_MatchLabel</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.0.26/mesws/Assembly/Eqp_LMT.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Web_Tray_InOut\</RelPath>
+      <UpdateFromURL>http://192.168.0.26/mesws/Assembly/Eqp_LMT.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LMTVision_Web_Tray_InOut_Eqp_LMT</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.0.26/MESWS/Assembly/MatchLabel.asmx%3f">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\glueWebReference\</RelPath>
+      <UpdateFromURL>http://192.168.0.26/MESWS/Assembly/MatchLabel.asmx%3f</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LMTVision_glueWebReference_MatchLabel</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.21.6/MESWS/Assembly/MatchLabel.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MBMatchLabel\</RelPath>
+      <UpdateFromURL>http://192.168.21.6/MESWS/Assembly/MatchLabel.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LMTVision_MBMatchLabel_MatchLabel</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.21.6/MESWS/Assembly/Eqp_BPF.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BPFWeb\</RelPath>
+      <UpdateFromURL>http://192.168.21.6/MESWS/Assembly/Eqp_BPF.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LMTVision_BPFWeb_Eqp_BPF</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.49.6/MESWS//Assembly/MatchLabel.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\JMBMatchLabel\</RelPath>
+      <UpdateFromURL>http://192.168.49.6/MESWS//Assembly/MatchLabel.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LMTVision_JMBMatchLabel_MatchLabel</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.49.6/MESWS/Assembly/Eqp_BPF.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\JBPFWebIn\</RelPath>
+      <UpdateFromURL>http://192.168.49.6/MESWS/Assembly/Eqp_BPF.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LMTVision_JBPFWebIn_Eqp_BPF</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.49.6/MESWS/Assembly/MatchLabel.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\JBPFWebOut\</RelPath>
+      <UpdateFromURL>http://192.168.49.6/MESWS/Assembly/MatchLabel.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LMTVision_JBPFWebOut_MatchLabel</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

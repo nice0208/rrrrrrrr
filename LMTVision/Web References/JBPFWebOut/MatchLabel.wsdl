@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetMatchCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sMatchLabel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMatchCodeResult" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMatchCodeNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtMatch">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchCodeNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMatchCodeNoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchCodeNoString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchCodeNoStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMatchCodeNoStringResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchCodeNoNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtMatch">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchCodeNoNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMatchCodeNoNewResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchCodeNoNewDateTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtMatch">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="sDateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchCodeNoNewDateTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMatchCodeNoNewDateTimeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertToMatchLabelNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sBarrelCoatingTrayNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtMTFTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertToMatchLabelNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConvertToMatchLabelNoResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckStatusBeforeMTF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCoatingTrayNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckStatusBeforeMTFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckStatusBeforeMTFResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMatchNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckStatusBeforeMTF_New">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sCoatingTrayNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckStatusBeforeMTF_NewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckStatusBeforeMTF_NewResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMatchNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bMapShippingTray" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="bIsMP" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMatchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBeforeMTF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sMTFType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCoatingTrayNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBeforeMTFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckBeforeMTFResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMatchNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bMapShippingTray" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="bIsMP" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMatchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBeforeMTF_NEW">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sMTFType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCoatingTrayNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBeforeMTF_NEWResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckBeforeMTF_NEWResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMatchNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bMapShippingTray" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="bIsMP" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMatchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sProduct" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckDataAfterMTF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckDataAfterMTFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckDataAfterMTFResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt1">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchCodeNoNewDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtMatch">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="sDateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchCodeNoNewDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMatchCodeNoNewDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlasmaLotionInterval">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAlot" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlasmaLotionIntervalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlasmaLotionIntervalResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sErrory" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlasmaLotionIntervalNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sEQP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAlot1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAlot2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlasmaLotionIntervalNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlasmaLotionIntervalNewResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sErrory" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBeforeL_H">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sHolderTray" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCoatingTray" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBeforeL_HResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckBeforeL_HResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sErrory" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchAlot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtMatch">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="sDateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchAlotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMatchAlotResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bLoadGlueEqpNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sEqpNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sGlueBarcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bLoadGlueEqpNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bLoadGlueEqpNoResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="iCanUseMins" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bDownGlueEqpNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sEqpNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sGlueBarcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bDownGlueEqpNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bDownGlueEqpNoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLensBarcoderMatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sLensBarcoder" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLensBarcoderMatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLensBarcoderMatchResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FluidDispensingAutoOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEqp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLot" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FluidDispensingAutoOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FluidDispensingAutoOutResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssemblyBPFOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sInputLot" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOutputLot" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEqpNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssemblyBPFOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssemblyBPFOutResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetMatchCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMatchCode" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMatchCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchCodeNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMatchCodeNo" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchCodeNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMatchCodeNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchCodeNoStringSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMatchCodeNoString" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchCodeNoStringSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMatchCodeNoStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchCodeNoNewSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMatchCodeNoNew" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchCodeNoNewSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMatchCodeNoNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchCodeNoNewDateTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMatchCodeNoNewDateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchCodeNoNewDateTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMatchCodeNoNewDateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvertToMatchLabelNoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvertToMatchLabelNo" />
+  </wsdl:message>
+  <wsdl:message name="ConvertToMatchLabelNoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertToMatchLabelNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckStatusBeforeMTFSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckStatusBeforeMTF" />
+  </wsdl:message>
+  <wsdl:message name="CheckStatusBeforeMTFSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckStatusBeforeMTFResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckStatusBeforeMTF_NewSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckStatusBeforeMTF_New" />
+  </wsdl:message>
+  <wsdl:message name="CheckStatusBeforeMTF_NewSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckStatusBeforeMTF_NewResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckBeforeMTFSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckBeforeMTF" />
+  </wsdl:message>
+  <wsdl:message name="CheckBeforeMTFSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckBeforeMTFResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckBeforeMTF_NEWSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckBeforeMTF_NEW" />
+  </wsdl:message>
+  <wsdl:message name="CheckBeforeMTF_NEWSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckBeforeMTF_NEWResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckDataAfterMTFSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckDataAfterMTF" />
+  </wsdl:message>
+  <wsdl:message name="CheckDataAfterMTFSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckDataAfterMTFResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchCodeNoNewDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMatchCodeNoNewDate" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchCodeNoNewDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMatchCodeNoNewDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlasmaLotionIntervalSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlasmaLotionInterval" />
+  </wsdl:message>
+  <wsdl:message name="GetPlasmaLotionIntervalSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlasmaLotionIntervalResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlasmaLotionIntervalNewSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlasmaLotionIntervalNew" />
+  </wsdl:message>
+  <wsdl:message name="GetPlasmaLotionIntervalNewSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlasmaLotionIntervalNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckBeforeL_HSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckBeforeL_H" />
+  </wsdl:message>
+  <wsdl:message name="CheckBeforeL_HSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckBeforeL_HResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchAlotSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMatchAlot" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchAlotSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMatchAlotResponse" />
+  </wsdl:message>
+  <wsdl:message name="bLoadGlueEqpNoSoapIn">
+    <wsdl:part name="parameters" element="tns:bLoadGlueEqpNo" />
+  </wsdl:message>
+  <wsdl:message name="bLoadGlueEqpNoSoapOut">
+    <wsdl:part name="parameters" element="tns:bLoadGlueEqpNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="bDownGlueEqpNoSoapIn">
+    <wsdl:part name="parameters" element="tns:bDownGlueEqpNo" />
+  </wsdl:message>
+  <wsdl:message name="bDownGlueEqpNoSoapOut">
+    <wsdl:part name="parameters" element="tns:bDownGlueEqpNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLensBarcoderMatchSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLensBarcoderMatch" />
+  </wsdl:message>
+  <wsdl:message name="GetLensBarcoderMatchSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLensBarcoderMatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="FluidDispensingAutoOutSoapIn">
+    <wsdl:part name="parameters" element="tns:FluidDispensingAutoOut" />
+  </wsdl:message>
+  <wsdl:message name="FluidDispensingAutoOutSoapOut">
+    <wsdl:part name="parameters" element="tns:FluidDispensingAutoOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssemblyBPFOutSoapIn">
+    <wsdl:part name="parameters" element="tns:AssemblyBPFOut" />
+  </wsdl:message>
+  <wsdl:message name="AssemblyBPFOutSoapOut">
+    <wsdl:part name="parameters" element="tns:AssemblyBPFOutResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MatchLabelSoap">
+    <wsdl:operation name="GetMatchCode">
+      <wsdl:input message="tns:GetMatchCodeSoapIn" />
+      <wsdl:output message="tns:GetMatchCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNo">
+      <wsdl:input message="tns:GetMatchCodeNoSoapIn" />
+      <wsdl:output message="tns:GetMatchCodeNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNoString">
+      <wsdl:input message="tns:GetMatchCodeNoStringSoapIn" />
+      <wsdl:output message="tns:GetMatchCodeNoStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNoNew">
+      <wsdl:input message="tns:GetMatchCodeNoNewSoapIn" />
+      <wsdl:output message="tns:GetMatchCodeNoNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNoNewDateTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取配对信息</wsdl:documentation>
+      <wsdl:input message="tns:GetMatchCodeNoNewDateTimeSoapIn" />
+      <wsdl:output message="tns:GetMatchCodeNoNewDateTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToMatchLabelNo">
+      <wsdl:input message="tns:ConvertToMatchLabelNoSoapIn" />
+      <wsdl:output message="tns:ConvertToMatchLabelNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckStatusBeforeMTF">
+      <wsdl:input message="tns:CheckStatusBeforeMTFSoapIn" />
+      <wsdl:output message="tns:CheckStatusBeforeMTFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckStatusBeforeMTF_New">
+      <wsdl:input message="tns:CheckStatusBeforeMTF_NewSoapIn" />
+      <wsdl:output message="tns:CheckStatusBeforeMTF_NewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBeforeMTF">
+      <wsdl:input message="tns:CheckBeforeMTFSoapIn" />
+      <wsdl:output message="tns:CheckBeforeMTFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBeforeMTF_NEW">
+      <wsdl:input message="tns:CheckBeforeMTF_NEWSoapIn" />
+      <wsdl:output message="tns:CheckBeforeMTF_NEWSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDataAfterMTF">
+      <wsdl:input message="tns:CheckDataAfterMTFSoapIn" />
+      <wsdl:output message="tns:CheckDataAfterMTFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNoNewDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取配对信息2018/08/06</wsdl:documentation>
+      <wsdl:input message="tns:GetMatchCodeNoNewDateSoapIn" />
+      <wsdl:output message="tns:GetMatchCodeNoNewDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlasmaLotionInterval">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取Plasma洗净后距今的时间差(给锁配机/L+H组装机返回Y/N结果</wsdl:documentation>
+      <wsdl:input message="tns:GetPlasmaLotionIntervalSoapIn" />
+      <wsdl:output message="tns:GetPlasmaLotionIntervalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlasmaLotionIntervalNew">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取Plasma洗净后距今的时间差(给涂膜机返回Y/N结果</wsdl:documentation>
+      <wsdl:input message="tns:GetPlasmaLotionIntervalNewSoapIn" />
+      <wsdl:output message="tns:GetPlasmaLotionIntervalNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBeforeL_H">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">检查是否符合L+H的锁配条件，返回Y/N结果</wsdl:documentation>
+      <wsdl:input message="tns:CheckBeforeL_HSoapIn" />
+      <wsdl:output message="tns:CheckBeforeL_HSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchAlot">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取配对信息2018/08/06</wsdl:documentation>
+      <wsdl:input message="tns:GetMatchAlotSoapIn" />
+      <wsdl:output message="tns:GetMatchAlotSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bLoadGlueEqpNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">胶水机台上机操作</wsdl:documentation>
+      <wsdl:input message="tns:bLoadGlueEqpNoSoapIn" />
+      <wsdl:output message="tns:bLoadGlueEqpNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bDownGlueEqpNo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">胶水机台上机操作</wsdl:documentation>
+      <wsdl:input message="tns:bDownGlueEqpNoSoapIn" />
+      <wsdl:output message="tns:bDownGlueEqpNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLensBarcoderMatch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据LensBarcoder返回L1配对</wsdl:documentation>
+      <wsdl:input message="tns:GetLensBarcoderMatchSoapIn" />
+      <wsdl:output message="tns:GetLensBarcoderMatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FluidDispensingAutoOut">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">RA机台点胶自动出站&amp;站点判断</wsdl:documentation>
+      <wsdl:input message="tns:FluidDispensingAutoOutSoapIn" />
+      <wsdl:output message="tns:FluidDispensingAutoOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssemblyBPFOut">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">组立BPF出站 参数：1、上机Coating tray条码 string sInputLot； 2、Output Coating tray条码 string sOutputLot；3、BPF组装机 string sEqpNo  4、提示信息 out string sMsg</wsdl:documentation>
+      <wsdl:input message="tns:AssemblyBPFOutSoapIn" />
+      <wsdl:output message="tns:AssemblyBPFOutSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MatchLabelSoap" type="tns:MatchLabelSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMatchCode">
+      <soap:operation soapAction="http://tempuri.org/GetMatchCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNo">
+      <soap:operation soapAction="http://tempuri.org/GetMatchCodeNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNoString">
+      <soap:operation soapAction="http://tempuri.org/GetMatchCodeNoString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNoNew">
+      <soap:operation soapAction="http://tempuri.org/GetMatchCodeNoNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNoNewDateTime">
+      <soap:operation soapAction="http://tempuri.org/GetMatchCodeNoNewDateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToMatchLabelNo">
+      <soap:operation soapAction="http://tempuri.org/ConvertToMatchLabelNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckStatusBeforeMTF">
+      <soap:operation soapAction="http://tempuri.org/CheckStatusBeforeMTF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckStatusBeforeMTF_New">
+      <soap:operation soapAction="http://tempuri.org/CheckStatusBeforeMTF_New" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBeforeMTF">
+      <soap:operation soapAction="http://tempuri.org/CheckBeforeMTF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBeforeMTF_NEW">
+      <soap:operation soapAction="http://tempuri.org/CheckBeforeMTF_NEW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDataAfterMTF">
+      <soap:operation soapAction="http://tempuri.org/CheckDataAfterMTF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNoNewDate">
+      <soap:operation soapAction="http://tempuri.org/GetMatchCodeNoNewDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlasmaLotionInterval">
+      <soap:operation soapAction="http://tempuri.org/GetPlasmaLotionInterval" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlasmaLotionIntervalNew">
+      <soap:operation soapAction="http://tempuri.org/GetPlasmaLotionIntervalNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBeforeL_H">
+      <soap:operation soapAction="http://tempuri.org/CheckBeforeL_H" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchAlot">
+      <soap:operation soapAction="http://tempuri.org/GetMatchAlot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bLoadGlueEqpNo">
+      <soap:operation soapAction="http://tempuri.org/bLoadGlueEqpNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bDownGlueEqpNo">
+      <soap:operation soapAction="http://tempuri.org/bDownGlueEqpNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLensBarcoderMatch">
+      <soap:operation soapAction="http://tempuri.org/GetLensBarcoderMatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FluidDispensingAutoOut">
+      <soap:operation soapAction="http://tempuri.org/FluidDispensingAutoOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssemblyBPFOut">
+      <soap:operation soapAction="http://tempuri.org/AssemblyBPFOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MatchLabelSoap12" type="tns:MatchLabelSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMatchCode">
+      <soap12:operation soapAction="http://tempuri.org/GetMatchCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNo">
+      <soap12:operation soapAction="http://tempuri.org/GetMatchCodeNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNoString">
+      <soap12:operation soapAction="http://tempuri.org/GetMatchCodeNoString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNoNew">
+      <soap12:operation soapAction="http://tempuri.org/GetMatchCodeNoNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNoNewDateTime">
+      <soap12:operation soapAction="http://tempuri.org/GetMatchCodeNoNewDateTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToMatchLabelNo">
+      <soap12:operation soapAction="http://tempuri.org/ConvertToMatchLabelNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckStatusBeforeMTF">
+      <soap12:operation soapAction="http://tempuri.org/CheckStatusBeforeMTF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckStatusBeforeMTF_New">
+      <soap12:operation soapAction="http://tempuri.org/CheckStatusBeforeMTF_New" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBeforeMTF">
+      <soap12:operation soapAction="http://tempuri.org/CheckBeforeMTF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBeforeMTF_NEW">
+      <soap12:operation soapAction="http://tempuri.org/CheckBeforeMTF_NEW" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDataAfterMTF">
+      <soap12:operation soapAction="http://tempuri.org/CheckDataAfterMTF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchCodeNoNewDate">
+      <soap12:operation soapAction="http://tempuri.org/GetMatchCodeNoNewDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlasmaLotionInterval">
+      <soap12:operation soapAction="http://tempuri.org/GetPlasmaLotionInterval" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlasmaLotionIntervalNew">
+      <soap12:operation soapAction="http://tempuri.org/GetPlasmaLotionIntervalNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBeforeL_H">
+      <soap12:operation soapAction="http://tempuri.org/CheckBeforeL_H" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchAlot">
+      <soap12:operation soapAction="http://tempuri.org/GetMatchAlot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bLoadGlueEqpNo">
+      <soap12:operation soapAction="http://tempuri.org/bLoadGlueEqpNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bDownGlueEqpNo">
+      <soap12:operation soapAction="http://tempuri.org/bDownGlueEqpNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLensBarcoderMatch">
+      <soap12:operation soapAction="http://tempuri.org/GetLensBarcoderMatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FluidDispensingAutoOut">
+      <soap12:operation soapAction="http://tempuri.org/FluidDispensingAutoOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssemblyBPFOut">
+      <soap12:operation soapAction="http://tempuri.org/AssemblyBPFOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MatchLabel">
+    <wsdl:port name="MatchLabelSoap" binding="tns:MatchLabelSoap">
+      <soap:address location="http://192.168.49.6/MESWS/Assembly/MatchLabel.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MatchLabelSoap12" binding="tns:MatchLabelSoap12">
+      <soap12:address location="http://192.168.49.6/MESWS/Assembly/MatchLabel.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

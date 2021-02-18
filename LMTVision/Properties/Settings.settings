@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LMTVision.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LMTVision_MBMatchLabel_MatchLabel" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.21.6/MESWS/Assembly/MatchLabel.asmx</Value>
+    </Setting>
+    <Setting Name="LMTVision_JMBMatchLabel_MatchLabel" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.49.6/MESWS/Assembly/MatchLabel.asmx</Value>
+    </Setting>
+    <Setting Name="LMTVision_GlueMatchLabel_MatchLabel" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.26/MESWS/Assembly/MatchLabel.asmx</Value>
+    </Setting>
+    <Setting Name="LMTVision_BPFWeb_Eqp_BPF" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.21.6/MESWS/Assembly/Eqp_BPF.asmx</Value>
+    </Setting>
+    <Setting Name="LMTVision_JBPFWebIn_Eqp_BPF" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.49.6/MESWS/Assembly/Eqp_BPF.asmx</Value>
+    </Setting>
+    <Setting Name="LMTVision_JBPFWebOut_MatchLabel" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.49.6/MESWS/Assembly/MatchLabel.asmx</Value>
+    </Setting>
+    <Setting Name="LMTVision_glueWebReference_MatchLabel" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.26/MESWS/Assembly/MatchLabel.asmx</Value>
+    </Setting>
+    <Setting Name="LMTVision_Web_Tray_InOut_Eqp_LMT" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.26/mesws/Assembly/Eqp_LMT.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

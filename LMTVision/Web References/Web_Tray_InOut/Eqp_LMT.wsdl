@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SaveFAIInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveFAIInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveFAIInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sTrayNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sProduct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEqpNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckInResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sTrayNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sProduct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEqpNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sGlueCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iQty" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtLensBarcode">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckOutResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckOut_YF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sInTrayNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOutTrayNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sProduct" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEqpNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sGlueCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iQty" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtLensBarcode">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckOut_YFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckOut_YFResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaveFAIInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveFAIInfo" />
+  </wsdl:message>
+  <wsdl:message name="SaveFAIInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveFAIInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckInSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckIn" />
+  </wsdl:message>
+  <wsdl:message name="CheckInSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckInResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckOutSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckOut" />
+  </wsdl:message>
+  <wsdl:message name="CheckOutSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckOut_YFSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckOut_YF" />
+  </wsdl:message>
+  <wsdl:message name="CheckOut_YFSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckOut_YFResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Eqp_LMTSoap">
+    <wsdl:operation name="SaveFAIInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">写入LMT胶重首件结果</wsdl:documentation>
+      <wsdl:input message="tns:SaveFAIInfoSoapIn" />
+      <wsdl:output message="tns:SaveFAIInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIn">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">LMT上机前检查 sTrayNo：上机Tray sProduct：机台设定的生产机种 sEqpNo：LMT机台号 sMsg：返回False时的错误提示信息</wsdl:documentation>
+      <wsdl:input message="tns:CheckInSoapIn" />
+      <wsdl:output message="tns:CheckInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">LMT点胶完成后回报MES sTrayNo：上机Tray sProduct：机台设定的生产机种 sEqpNo：LMT机台号 sGlueCode：胶水条码，无则传空 iQty：点胶数量 dtLensBarcode：LMT读取到的Lens Barcode，无则传空 sMsg：返回False时的错误提示信息</wsdl:documentation>
+      <wsdl:input message="tns:CheckOutSoapIn" />
+      <wsdl:output message="tns:CheckOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut_YF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">LMT点胶完成后回报MES sInTrayNo：上机Tray sOutTrayNo：下机Tray sProduct：机台设定的生产机种 sEqpNo：LMT机台号 sGlueCode：胶水条码，无则传空 iQty：点胶数量 dtLensBarcode：LMT读取到的Lens Barcode，无则传空 sMsg：返回False时的错误提示信息</wsdl:documentation>
+      <wsdl:input message="tns:CheckOut_YFSoapIn" />
+      <wsdl:output message="tns:CheckOut_YFSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Eqp_LMTSoap" type="tns:Eqp_LMTSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveFAIInfo">
+      <soap:operation soapAction="http://tempuri.org/SaveFAIInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIn">
+      <soap:operation soapAction="http://tempuri.org/CheckIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut">
+      <soap:operation soapAction="http://tempuri.org/CheckOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut_YF">
+      <soap:operation soapAction="http://tempuri.org/CheckOut_YF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Eqp_LMTSoap12" type="tns:Eqp_LMTSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveFAIInfo">
+      <soap12:operation soapAction="http://tempuri.org/SaveFAIInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIn">
+      <soap12:operation soapAction="http://tempuri.org/CheckIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut">
+      <soap12:operation soapAction="http://tempuri.org/CheckOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOut_YF">
+      <soap12:operation soapAction="http://tempuri.org/CheckOut_YF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Eqp_LMT">
+    <wsdl:port name="Eqp_LMTSoap" binding="tns:Eqp_LMTSoap">
+      <soap:address location="http://192.168.0.26/mesws/Assembly/Eqp_LMT.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Eqp_LMTSoap12" binding="tns:Eqp_LMTSoap12">
+      <soap12:address location="http://192.168.0.26/mesws/Assembly/Eqp_LMT.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
